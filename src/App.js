@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import Header from './components/Header';
+import NavList from './components/NavList';
+import PizzaItem from './components/PizzaItem';
+
+import './scss/main.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="wrapper">
+            <Header />
+            <NavList />
+            <h3>All pizzas</h3>
+            <section className="pizza">
+                <PizzaItem title="Cheeseburger pizza" price={19} />
+                <PizzaItem title="Asian shrimp" price={22} />
+                <PizzaItem title="Cheese chicken" price={24} />
+                <PizzaItem title="Cheese" price={18} />
+                <PizzaItem title="Cheeseburger pizza" price={19} />
+                <PizzaItem title="Asian shrimp" price={22} />
+                <PizzaItem title="Cheese chicken" price={24} />
+                <PizzaItem title="Cheese" price={18} />
+            </section>
+        </div>
+    );
 }
 
 export default App;
