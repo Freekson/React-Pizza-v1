@@ -5,10 +5,10 @@ function NavSort() {
             <p>
                 Sort by <span>popularity</span>
             </p>
-            <ul class="nav__menu nav__menu_active">
-                <li class="menu__item menu__item_active">popularity</li>
-                <li class="menu__item">price</li>
-                <li class="menu__item">alphabet</li>
+            <ul className="nav__menu">
+                <li className="menu__item menu__item_active">popularity</li>
+                <li className="menu__item">price</li>
+                <li className="menu__item">alphabet</li>
             </ul>
         </div>
     );

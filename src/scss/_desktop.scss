@@ -1,16 +1,13 @@
 /* Large desktops and laptops */
-@media (min-width: 1400px) {
-	body .wrapper .pizza {
-		flex-wrap: wrap;
-	}
-	.pizza__item .price-section .pizza-price {
-		width: 100px;
-		white-space: nowrap;
-	}
-}
-@media (min-width: 1200px) {
-}
-/* Portrait tablets and medium desktops */
-
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (max-width: 1400px) {
+    html {
+        font-size: 18px;
+    }
+    body .wrapper .pizza {
+        flex-wrap: wrap;
+    }
+    .pizza__item .price-section .pizza-price {
+        width: 100px;
+        white-space: nowrap;
+    }
 }

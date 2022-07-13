@@ -1,5 +1,12 @@
 /* Portrait tablets and small desktops */
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    
+@media (max-width: 1030px) {
+    body .pizza-cart {
+        width: 80%;
+    }
+}
+@media (max-width: 970px) {
+    body .wrapper .pizza .pizza__item {
+        width: 45%;
+    }
 }

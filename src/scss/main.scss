@@ -71,7 +71,6 @@ body {
                 width: 98%;
                 height: 1px;
                 background-color: #f7f7f7;
-                margin-bottom: 30px; //!!delete
             }
         }
         .nav {
@@ -268,6 +267,7 @@ body {
                     .active-btn {
                         background-color: white;
                         border: 1px solid $active-color;
+                        transition: all 0.2s;
                         p {
                             color: $active-color;
                             display: flex;
@@ -284,6 +284,22 @@ body {
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                        }
+                        &:hover {
+                            background-color: $active-color;
+                            color: white;
+                            p {
+                                color: white;
+                            }
+                            svg {
+                                path {
+                                    fill: white;
+                                }
+                            }
+                            .amount {
+                                background-color: white;
+                                color: $active-color;
+                            }
                         }
                     }
                 }
@@ -538,7 +554,7 @@ body {
             display: flex;
             justify-content: center;
             padding: 15px 20px;
-            width: 30%;
+            width: 50%;
         }
     }
     body .wrapper .pizza__item .price-section {
