@@ -1,29 +1,26 @@
+import React from 'react';
+
 import NavSort from './NavSort';
 
 function NavList() {
+    const [activeCategory, setActiveCategory] = React.useState(0);
+    const onClickCategory = (i) => {
+        setActiveCategory(i);
+    };
+    const categories = ['All', 'Meat', 'Vegetarian', 'Grill', 'Spicy', 'Closed'];
     return (
         <nav className="nav">
             <ul className="nav__list">
-                <li>
-                    <a href="#" className="active">
-                        All
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Meat</a>
-                </li>
-                <li>
-                    <a href="#">Vegetarian</a>
-                </li>
-                <li>
-                    <a href="#">Grill</a>
-                </li>
-                <li>
-                    <a href="#">Spicy</a>
-                </li>
-                <li>
-                    <a href="#">Closed</a>
-                </li>
+                {categories.map((value, index) => (
+                    <li>
+                        <a
+                            href="#"
+                            onClick={() => onClickCategory(index)}
+                            className={activeCategory == index ? 'active' : ''}>
+                            {value}
+                        </a>
+                    </li>
+                ))}
             </ul>
             <NavSort />
         </nav>

@@ -1,7 +1,8 @@
+import arrow from '../assets/img/arrow.svg';
 function NavSort() {
     return (
         <div className="nav__sort">
-            <img src="./img/arrow.svg" alt="^-^" />
+            <img src={arrow} alt="^-^" />
             <p>
                 Sort by <span>popularity</span>
             </p>

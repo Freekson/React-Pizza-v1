@@ -1,11 +1,11 @@
 import React from 'react';
 
-function PizzaItem({ title, price }) {
+function PizzaItem({ title, price, img }) {
     const [pizzaCount, setPizzaCount] = React.useState(1);
     const onClickButton = () => setPizzaCount(pizzaCount + 1);
     return (
         <div className="pizza__item">
-            <img src="./img/pizza-1.png" alt="pizza" className="pizza__img" />
+            <img src={img} alt="pizza" className="pizza__img" />
             <p className="pizza__header">{title}</p>
             <div className="kind-section">
                 <div className="kind">
