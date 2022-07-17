@@ -18,8 +18,9 @@ function PizzaItem({ title, price, img, sizes, types }) {
                 <div className="kind">
                     {types.map((typeId, index) => (
                         <div
+                            key={typeId}
                             onClick={() => onClickType(index)}
-                            className={activeType == index ? 'kind__active' : ''}>
+                            className={activeType === index ? 'kind__active' : ''}>
                             {typeNames[typeId]}
                         </div>
                     ))}
@@ -27,8 +28,9 @@ function PizzaItem({ title, price, img, sizes, types }) {
                 <div className="size">
                     {sizes.map((sizeId, index) => (
                         <div
+                            key={sizeId}
                             onClick={() => onClickSize(index)}
-                            className={activeSize == index ? 'kind__active' : ''}>
+                            className={activeSize === index ? 'kind__active' : ''}>
                             {sizeId} cm.
                         </div>
                     ))}

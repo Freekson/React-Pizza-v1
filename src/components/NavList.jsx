@@ -12,11 +12,11 @@ function NavList() {
         <nav className="nav">
             <ul className="nav__list">
                 {categories.map((value, index) => (
-                    <li>
+                    <li key={index}>
                         <a
-                            href="#"
+                            href="#index"
                             onClick={() => onClickCategory(index)}
-                            className={activeCategory == index ? 'active' : ''}>
+                            className={activeCategory === index ? 'active' : ''}>
                             {value}
                         </a>
                     </li>

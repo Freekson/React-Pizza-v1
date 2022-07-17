@@ -17,6 +17,7 @@ function App() {
             <section className="pizza">
                 {pizzas.map((obj) => (
                     <PizzaItem
+                        key={obj.id}
                         title={obj.title}
                         price={obj.price}
                         img={obj.imageUrl}

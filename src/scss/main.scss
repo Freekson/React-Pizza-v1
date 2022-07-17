@@ -92,6 +92,7 @@ body {
                         background-color: #f9f9f9;
                         border-radius: 30px;
                         padding: 10px 25px;
+                        transition: all 0.3s;
                     }
                     .active {
                         color: white;
@@ -107,6 +108,7 @@ body {
                 display: flex;
                 align-items: center;
                 position: relative;
+                user-select: none;
                 img {
                     width: 10px;
                     height: 5.6px;
@@ -116,36 +118,70 @@ body {
                     span {
                         color: $active-color;
                         border-bottom: $active-color 1px dashed;
+                        cursor: pointer;
                     }
                 }
                 .nav__menu {
                     opacity: 0;
+                    position: absolute;
                     padding: 0;
                     position: absolute;
                     list-style: none;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    height: 136px;
                     width: 132px;
                     top: 50px;
-                    right: 0;
+                    left: 50px;
                     background-color: white;
                     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
                     border-radius: 10px;
+                    height: 136px;
+                    margin-top: 0;
+                    transition: all 0.5s;
                     .menu__item {
                         padding: 10px 5px 10px 15px;
                         font-weight: normal;
-                        cursor: pointer;
+                        transition: all 0.5s;
                         &_active {
                             background-color: rgba(254, 95, 30, 0.05);
                             color: #fe5f1e;
-                            font-weight: bold;
+                            padding: 10px 5px 10px 15px;
                             cursor: auto;
+                            font-weight: normal;
                         }
                     }
                     &_active {
+                        user-select: none;
                         opacity: 1;
+                        padding: 0;
+                        position: absolute;
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 132px;
+                        top: 50px;
+                        left: 75px;
+                        background-color: white;
+                        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+                        border-radius: 10px;
+                        height: 136px;
+                        margin-top: 0;
+                        transition: all 0.5s;
+                        .menu__item {
+                            padding: 10px 5px 10px 15px;
+                            font-weight: normal;
+                            cursor: pointer;
+                            transition: all 0.5s;
+                            &_active {
+                                background-color: rgba(254, 95, 30, 0.05);
+                                color: #fe5f1e;
+                                padding: 10px 5px 10px 15px;
+                                cursor: auto;
+                                font-weight: normal;
+                            }
+                        }
                     }
                 }
             }
