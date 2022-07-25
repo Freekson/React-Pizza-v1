@@ -6,9 +6,18 @@ import PizzaItem from './components/PizzaItem';
 
 import './scss/main.scss';
 
-import pizzas from './assets/json/pizzas.json';
-
 function App() {
+    let [pizzas, setPizzas] = React.useState([]);
+
+    React.useEffect(() => {
+        fetch('https://62df058e976ae7460be6a145.mockapi.io/pizzas')
+            .then((res) => {
+                return res.json();
+            })
+            .then((pizzas) => {
+                setPizzas(pizzas);
+            });
+    }, []);
     return (
         <div className="wrapper">
             <Header />
