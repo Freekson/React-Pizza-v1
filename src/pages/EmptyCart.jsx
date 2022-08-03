@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import emptyCart from '../assets/img/cart-empty.png';
 
@@ -11,9 +12,9 @@ const EmptyCart = () => {
                 To order pizza, go to the main page.
             </p>
             <img src={emptyCart} alt="cart is empty" />
-            <a className="btn" href="/home">
+            <Link className="btn" to="/  ">
                 Come back
-            </a>
+            </Link>
         </section>
     );
 };

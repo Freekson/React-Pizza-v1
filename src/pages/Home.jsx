@@ -1,8 +1,8 @@
 import React from 'react';
 
 import NavList from '../components/NavList';
-import PizzaItem from '../components/PizzaBlock/index';
-import Skeleton from '../components/PizzaBlock/';
+import PizzaItem from '../components/PizzaBlock/PizzaItem';
+import Skeleton from '../components/PizzaBlock/Skeleton';
 
 const Home = () => {
     const [pizzas, setPizzas] = React.useState([]);
@@ -19,7 +19,7 @@ const Home = () => {
             });
     }, []);
     return (
-        <>
+        <div>
             <NavList />
             <h3>All pizzas</h3>
             <section className="pizza">
@@ -36,7 +36,7 @@ const Home = () => {
                           />
                       ))}
             </section>
-        </>
+        </div>
     );
 };
 
