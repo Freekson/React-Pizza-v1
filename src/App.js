@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -8,6 +8,9 @@ import EmptyCart from './pages/EmptyCart';
 import NotFound from './pages/NotFound';
 
 import './scss/main.scss';
+import './scss/_desktop.scss';
+import './scss/_tablet.scss';
+import './scss/_mobile.scss';
 
 function App() {
     return (

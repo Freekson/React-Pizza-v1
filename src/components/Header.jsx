@@ -10,10 +10,10 @@ function Header() {
             <div className="header__wrapper">
                 <Link className="header__logo-section logo-section" to="/">
                     <img src={logo} alt="not found :(" className="logo-section__img" />
-                    <a className="logo-section__text">
+                    <div className="logo-section__text">
                         <b>REACT PIZZA</b>
                         <p>the most delicious pizza in the universe</p>
-                    </a>
+                    </div>
                 </Link>
                 <Link className="header__cart-section cart-section" to="/cart">
                     <span>52 $</span>

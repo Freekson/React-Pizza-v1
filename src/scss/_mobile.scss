@@ -1,10 +1,14 @@
 /* Landscape phones and smaller */
+
 @media (max-width: 670px) {
     html {
         font-size: 20px;
     }
+    body .wrapper .header .header__wrapper {
+        justify-content: center;
+    }
     body .wrapper .pizza .pizza__item {
-        width: 85%;
+        width: 75%;
         margin: 50px 0;
         .price-section .btn {
             margin-top: 20px;
@@ -62,5 +66,23 @@
     }
     body .cart .cart-status {
         font-size: 24px;
+    }
+}
+@media (max-width: 450px) {
+    body .wrapper .pizza .pizza__item {
+        width: 85%;
+        margin: 25px 0;
+    }
+}
+@media (max-width: 380px) {
+    body .cart .cart-header .cart-header__item {
+        margin: 10px 0;
+        svg {
+            height: 45px;
+            width: 45px;
+        }
+        p {
+            font-weight: bold;
+        }
     }
 }

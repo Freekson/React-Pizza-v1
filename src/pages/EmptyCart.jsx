@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import emptyCart from '../assets/img/cart-empty.png';
 
 const EmptyCart = () => {
+    window.scrollTo(0, 0);
     return (
         <section className="cart">
             <h3 className="cart-status">Cart is empty 😕</h3>

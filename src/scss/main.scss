@@ -88,8 +88,8 @@ body {
                 flex-wrap: wrap;
                 padding: 0;
                 li {
-                    a {
-                        text-decoration: none;
+                    div {
+                        cursor: pointer;
                         color: black;
                         display: block;
                         background-color: #f9f9f9;
@@ -385,10 +385,10 @@ body {
             .cart-header__item {
                 display: flex;
                 align-items: center;
+                text-decoration: none;
                 a {
                     color: #777;
                     text-align: center;
-                    text-decoration: none;
                 }
                 h3 {
                     margin: 0;
@@ -567,8 +567,8 @@ body {
         .pizza-img {
             width: 60%;
             img {
-                width: 130px;
-                height: 130px;
+                width: 180px;
+                height: 180px;
             }
         }
         .pizza-prise p {
@@ -590,73 +590,5 @@ body {
         .amount {
             margin: 0 20px;
         }
-    }
-}
-@media (max-width: 670px) {
-    html {
-        font-size: 20px;
-    }
-    body .wrapper .header .header__wrapper {
-        justify-content: center;
-    }
-    body .wrapper .pizza .pizza__item {
-        width: 85%;
-        margin: 50px 0;
-        .price-section .btn {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            padding: 15px 20px;
-            width: 50%;
-        }
-    }
-    body .wrapper .pizza__item .price-section {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        flex-direction: column;
-        .pizza-price {
-            width: 130px;
-        }
-    }
-    body .pizza-cart .pizza-cart__item .pizza-img {
-        flex-direction: column;
-    }
-    body .pizza-cart .pizza-cart__item .pizza-img .pizza-cart__text {
-        margin: 0;
-        text-align: center;
-    }
-    .pizza-cart {
-        width: 95%;
-    }
-    body .cart .cart-header {
-        flex-direction: column;
-        align-items: center;
-    }
-    body .buttons div[class^='btn'] {
-        svg {
-            margin-right: 10px;
-        }
-    }
-    body .conclusion .order p span,
-    body .conclusion .amount p span {
-        white-space: nowrap;
-    }
-    body .buttons {
-        width: 95%;
-        flex-direction: column;
-        align-items: center;
-        .btn-pay {
-            margin-top: 10px;
-        }
-    }
-    body .cart {
-        width: 90%;
-        margin: 0 auto;
-        img {
-            width: 70%;
-        }
-    }
-    body .cart .cart-status {
-        font-size: 24px;
     }
 }

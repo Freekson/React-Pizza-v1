@@ -6,6 +6,7 @@ import pizza2 from '../assets/img/pizza-2.png';
 import pizza3 from '../assets/img/pizza-3.png';
 
 const Cart = () => {
+    window.scrollTo(0, 0);
     return (
         <div>
             <section className="cart">
@@ -41,7 +42,7 @@ const Cart = () => {
                         </svg>
                         <h3>Cart</h3>
                     </div>
-                    <div className="cart-header__item">
+                    <Link to="/empty-cart" className="cart-header__item">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={20}
@@ -77,8 +78,8 @@ const Cart = () => {
                                 strokeLinejoin="round"
                             />
                         </svg>
-                        <Link to="/empty-cart">Empty trash</Link>
-                    </div>
+                        <p to="/empty-cart">Empty trash</p>
+                    </Link>
                 </section>
             </section>
             <section className="pizza-cart">

@@ -13,12 +13,12 @@ function NavList() {
             <ul className="nav__list">
                 {categories.map((value, index) => (
                     <li key={index}>
-                        <a
+                        <div
                             href="#index"
                             onClick={() => onClickCategory(index)}
                             className={activeCategory === index ? 'active' : ''}>
                             {value}
-                        </a>
+                        </div>
                     </li>
                 ))}
             </ul>
