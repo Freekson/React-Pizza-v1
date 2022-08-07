@@ -8,9 +8,8 @@ import EmptyCart from './pages/EmptyCart';
 import NotFound from './pages/NotFound';
 
 import './scss/main.scss';
-import './scss/_desktop.scss';
-import './scss/_tablet.scss';
-import './scss/_mobile.scss';
+
+//import './scss/_mobile.scss';
 
 function App() {
     return (
