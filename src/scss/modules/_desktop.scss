@@ -1,16 +1,7 @@
 /* Large desktops and laptops */
-@media (max-width: 1400px) {
-    html {
-        font-size: 18px;
-    }
-    body .wrapper .pizza {
-        flex-wrap: wrap;
-    }
-    .pizza__item .price-section .pizza-price {
-        width: 100px;
-        white-space: nowrap;
-    }
-}
+$active-color: #fe5f1e;
+$background-color: #ffdf8c;
+
 @media (min-width: 1925px) {
     html {
         font-size: 22px;

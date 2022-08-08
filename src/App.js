@@ -9,8 +9,6 @@ import NotFound from './pages/NotFound';
 
 import './scss/main.scss';
 
-//import './scss/_mobile.scss';
-
 function App() {
     return (
         <div className="wrapper">

@@ -1,12 +1,10 @@
-@import url(./_header.scss);
-@import url(./_footer.scss);
-@import url(./_desktop.scss);
-@import url(./_laptop.scss);
-@import url(./_tablet.scss);
-@import url(./_mobile.scss);
+@import 'variables';
+@import './components/_header';
+@import './modules/_desktop';
+@import './modules/_laptop.scss';
+@import './modules/_tablet.scss';
+@import './modules/_mobile.scss';
 
-$active-color: #fe5f1e;
-$background-color: #ffdf8c;
 //Write code here
 body {
     background-color: $background-color;
@@ -16,73 +14,7 @@ body {
         width: 96%;
         margin: 2%;
         border-radius: 10px;
-        .header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .header__wrapper {
-                width: 90%;
-                display: flex;
-                justify-content: space-between;
-                margin: 0 5%;
-                padding: 3% 0;
-                .logo-section {
-                    display: flex;
-                    align-items: center;
-                    text-decoration: none;
-                    &__img {
-                        width: 38px;
-                        height: 38px;
-                        margin-right: 20px;
-                    }
-                    &__text {
-                        b {
-                            color: black;
-                            margin: 0;
-                            font-size: 1.5rem;
-                            font-weight: 800;
-                        }
-                        p {
-                            margin: 0;
-                            color: #7b7b7b;
-                        }
-                    }
-                }
-                .cart-section {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: $active-color;
-                    color: white;
-                    height: 50px;
-                    border-radius: 30px;
-                    width: 150px;
-                    font-weight: bold;
-                    text-decoration: none;
-                    &__vl {
-                        height: 25px;
-                        width: 1px;
-                        background-color: #fe8756;
-                        margin: 0 10%;
-                    }
-                    span {
-                        img[alt='cart'] {
-                            width: 18px;
-                            height: 18px;
-                            margin-right: 5px;
-                        }
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                }
-            }
-            .header__vl {
-                width: 98%;
-                height: 1px;
-                background-color: #f7f7f7;
-            }
-        }
+
         .nav {
             font-weight: bold;
             display: flex;
@@ -513,89 +445,6 @@ body {
             font-weight: bold;
             color: white;
             background-color: $active-color;
-        }
-    }
-}
-
-@media (max-width: 1400px) {
-    html {
-        font-size: 18px;
-    }
-    body .wrapper .pizza {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        .pizza__item {
-            width: 31%;
-        }
-    }
-    .pizza__item .price-section .pizza-price {
-        width: 130px;
-        white-space: nowrap;
-    }
-}
-@media (max-width: 1030px) {
-    body .pizza-cart {
-        width: 80%;
-    }
-}
-@media (max-width: 970px) {
-    body .wrapper .pizza .pizza__item {
-        width: 45%;
-    }
-}
-@media (max-width: 800px) {
-    body .wrapper .header .header__wrapper {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .cart-section {
-            margin-top: 20px;
-        }
-    }
-    body .wrapper .nav__list {
-        justify-content: center;
-        li {
-            margin: 10px 15px 10px 0;
-        }
-    }
-    body .conclusion {
-        flex-direction: column;
-        .order {
-            p {
-                margin-top: 0;
-            }
-        }
-    }
-    body .buttons {
-        width: 80%;
-        justify-content: space-around;
-    }
-    body .pizza-cart .pizza-cart__item {
-        flex-direction: column;
-        .pizza-img {
-            width: 60%;
-            img {
-                width: 180px;
-                height: 180px;
-            }
-        }
-        .pizza-prise p {
-            margin: 0;
-        }
-        .pizza-delete {
-            margin-top: 15px;
-            svg {
-                width: 50px;
-                height: 50px;
-            }
-        }
-    }
-    body .pizza-cart .pizza-cart__item .pizza-amount {
-        svg {
-            width: 40px;
-            height: 40px;
-        }
-        .amount {
-            margin: 0 20px;
         }
     }
 }
