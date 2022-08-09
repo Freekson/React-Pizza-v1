@@ -7,21 +7,35 @@ import Skeleton from '../components/PizzaBlock/Skeleton';
 const Home = () => {
     const [pizzas, setPizzas] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
-
+    const [сategoryId, setCategoryId] = React.useState(1);
+    const [sortType, setSortType] = React.useState(0);
     React.useEffect(() => {
-        fetch('https://62df058e976ae7460be6a145.mockapi.io/pizzas')
-            .then((res) => {
-                return res.json();
-            })
-            .then((pizzas) => {
-                setPizzas(pizzas);
-                setIsLoading(false);
-            });
+        setIsLoading(true);
+        if (сategoryId == 0) {
+            fetch('https://62df058e976ae7460be6a145.mockapi.io/pizzas')
+                .then((res) => {
+                    return res.json();
+                })
+                .then((pizzas) => {
+                    setPizzas(pizzas);
+                    setIsLoading(false);
+                });
+        } else {
+            fetch('https://62df058e976ae7460be6a145.mockapi.io/pizzas?category=' + сategoryId)
+                .then((res) => {
+                    return res.json();
+                })
+                .then((pizzas) => {
+                    setPizzas(pizzas);
+                    setIsLoading(false);
+                });
+        }
         window.scrollTo(0, 0);
-    }, []);
+    }, [сategoryId]);
     return (
         <div>
-            <NavList />
+            <NavList value={сategoryId} onClickCategory={(id) => setCategoryId(id)} />
+
             <h3>All pizzas</h3>
             <section className="pizza">
                 {isLoading

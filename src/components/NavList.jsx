@@ -2,22 +2,18 @@ import React from 'react';
 
 import NavSort from './NavSort';
 
-function NavList() {
-    const [activeCategory, setActiveCategory] = React.useState(0);
-    const onClickCategory = (i) => {
-        setActiveCategory(i);
-    };
+function NavList({ value, onClickCategory }) {
     const categories = ['All', 'Meat', 'Vegetarian', 'Grill', 'Spicy', 'Closed'];
     return (
         <nav className="nav">
             <ul className="nav__list">
-                {categories.map((value, index) => (
+                {categories.map((categoryName, index) => (
                     <li key={index}>
                         <div
                             href="#index"
                             onClick={() => onClickCategory(index)}
-                            className={activeCategory === index ? 'active' : ''}>
-                            {value}
+                            className={value === index ? 'active' : ''}>
+                            {categoryName}
                         </div>
                     </li>
                 ))}
